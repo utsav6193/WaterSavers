@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ProximaNova-Regular.otf">
+            <string>ProximaNova-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Question7ViewController">
+            <connections>
+                <outlet property="picker" destination="uRI-5T-ulZ" id="k1E-Iz-Jv9"/>
+                <outlet property="view" destination="Se0-TG-Sd3" id="XEW-Vh-Uig"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Se0-TG-Sd3">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What type of washing machine do you have ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdO-ev-Kz5">
+                    <rect key="frame" x="25" y="235" width="325" height="120"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="27"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uRI-5T-ulZ">
+                    <rect key="frame" x="0.0" y="356" width="375" height="216"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="216" id="rol-Fo-Ovo"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="6YZ-cj-yI7"/>
+                        <outlet property="delegate" destination="-1" id="WAk-AV-w51"/>
+                    </connections>
+                </pickerView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0X-XK-SGl">
+                    <rect key="frame" x="258" y="582" width="60" height="60"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Bei-4Q-nUO"/>
+                        <constraint firstAttribute="width" constant="60" id="RVB-wu-9c4"/>
+                    </constraints>
+                    <state key="normal" image="next"/>
+                    <connections>
+                        <action selector="btnNext:" destination="-1" eventType="touchUpInside" id="PVB-we-hr8"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="927-cg-MDx">
+                    <rect key="frame" x="58" y="582" width="60" height="60"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="7ol-Ts-lQZ"/>
+                        <constraint firstAttribute="height" constant="60" id="hLB-LL-mHL"/>
+                    </constraints>
+                    <state key="normal" image="return"/>
+                    <connections>
+                        <action selector="btnBack:" destination="-1" eventType="touchUpInside" id="odX-TR-DCG"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="machinetype" translatesAutoresizingMaskIntoConstraints="NO" id="ns5-WK-EMd">
+                    <rect key="frame" x="100" y="30" width="175" height="175"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="175" id="5qa-Ls-TlT"/>
+                        <constraint firstAttribute="height" constant="175" id="lQ9-fe-rAo"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="f0X-XK-SGl" secondAttribute="bottom" constant="25" id="1DK-9f-64B"/>
+                <constraint firstItem="ns5-WK-EMd" firstAttribute="centerX" secondItem="Se0-TG-Sd3" secondAttribute="centerX" id="BK6-Ch-lMv"/>
+                <constraint firstItem="uRI-5T-ulZ" firstAttribute="leading" secondItem="Se0-TG-Sd3" secondAttribute="leading" id="Cid-vz-Jm0"/>
+                <constraint firstItem="927-cg-MDx" firstAttribute="top" secondItem="uRI-5T-ulZ" secondAttribute="bottom" constant="10" id="L1r-iH-rz7"/>
+                <constraint firstAttribute="bottom" secondItem="927-cg-MDx" secondAttribute="bottom" constant="25" id="OPG-Xz-zKO"/>
+                <constraint firstAttribute="trailing" secondItem="uRI-5T-ulZ" secondAttribute="trailing" id="T36-Pv-AIX"/>
+                <constraint firstItem="f0X-XK-SGl" firstAttribute="centerX" secondItem="Se0-TG-Sd3" secondAttribute="centerX" constant="100" id="TER-PK-Jbl"/>
+                <constraint firstAttribute="trailing" secondItem="XdO-ev-Kz5" secondAttribute="trailing" constant="25" id="bOc-9t-vlN"/>
+                <constraint firstItem="ns5-WK-EMd" firstAttribute="top" secondItem="Se0-TG-Sd3" secondAttribute="top" constant="30" id="cHf-Gn-qSL"/>
+                <constraint firstItem="927-cg-MDx" firstAttribute="centerX" secondItem="Se0-TG-Sd3" secondAttribute="centerX" constant="-100" id="mvd-UB-vm0"/>
+                <constraint firstItem="XdO-ev-Kz5" firstAttribute="leading" secondItem="Se0-TG-Sd3" secondAttribute="leading" constant="25" id="oWF-oA-rgU"/>
+                <constraint firstItem="uRI-5T-ulZ" firstAttribute="top" secondItem="XdO-ev-Kz5" secondAttribute="bottom" constant="1" id="ub6-2Z-gJS"/>
+                <constraint firstItem="XdO-ev-Kz5" firstAttribute="top" secondItem="ns5-WK-EMd" secondAttribute="bottom" constant="30" id="vip-3Z-ONW"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="machinetype" width="167" height="167"/>
+        <image name="next" width="64" height="64"/>
+        <image name="return" width="64" height="64"/>
+    </resources>
+</document>

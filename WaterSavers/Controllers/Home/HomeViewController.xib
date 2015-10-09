@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ProximaNova-Regular.otf">
+            <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
+            <connections>
+                <outlet property="txtPassword" destination="eWX-bc-9YB" id="aAh-Bl-YQx"/>
+                <outlet property="txtUsername" destination="XqL-aQ-ymx" id="NEM-rS-QX9"/>
+                <outlet property="view" destination="mVN-fk-TBZ" id="g2F-qd-Ex0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleAspectFit" id="mVN-fk-TBZ">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7tO-oW-ywG" userLabel="V - Logo">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="196"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WaterSaverslogo" translatesAutoresizingMaskIntoConstraints="NO" id="tuT-dN-hM7">
+                            <rect key="frame" x="22.5" y="-9.5" width="275" height="275"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="275" id="ILP-2V-lK9"/>
+                                <constraint firstAttribute="width" constant="275" id="vmF-Fx-un8"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerY" secondItem="tuT-dN-hM7" secondAttribute="centerY" constant="-30" id="SEu-o3-pnP"/>
+                        <constraint firstAttribute="centerX" secondItem="tuT-dN-hM7" secondAttribute="centerX" id="ig9-ek-BFH"/>
+                    </constraints>
+                </view>
+                <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMf-Ef-xXv">
+                    <rect key="frame" x="0.0" y="204" width="320" height="210"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eWX-bc-9YB">
+                            <rect key="frame" x="30" y="59" width="260" height="30"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="mM0-iE-Qsr"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jw-u3-Jxf">
+                            <rect key="frame" x="30" y="104" width="260" height="40"/>
+                            <animations/>
+                            <color key="backgroundColor" red="0.0039215686274509803" green="0.68235294117647061" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="m87-Oy-iKS"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                            <inset key="titleEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="LOGIN">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnLoginAction:" destination="-1" eventType="touchUpInside" id="D0y-xV-EmO"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XqL-aQ-ymx">
+                            <rect key="frame" x="30" y="14" width="260" height="30"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="8ZZ-g8-duX"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
+                        </textField>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="210" id="b7R-d6-CFU"/>
+                        <constraint firstAttribute="trailing" secondItem="eWX-bc-9YB" secondAttribute="trailing" constant="30" id="cOg-7i-bRC"/>
+                        <constraint firstItem="XqL-aQ-ymx" firstAttribute="leading" secondItem="CMf-Ef-xXv" secondAttribute="leading" constant="30" id="en2-2V-dE6"/>
+                        <constraint firstItem="eWX-bc-9YB" firstAttribute="top" secondItem="XqL-aQ-ymx" secondAttribute="bottom" constant="15" id="hcb-Hl-Wxi"/>
+                        <constraint firstItem="eWX-bc-9YB" firstAttribute="leading" secondItem="CMf-Ef-xXv" secondAttribute="leading" constant="30" id="ihu-gL-hSJ"/>
+                        <constraint firstItem="8jw-u3-Jxf" firstAttribute="leading" secondItem="CMf-Ef-xXv" secondAttribute="leading" constant="30" id="jSO-S5-5Sc"/>
+                        <constraint firstAttribute="bottom" secondItem="8jw-u3-Jxf" secondAttribute="bottom" constant="66" id="nzx-EU-Ale"/>
+                        <constraint firstItem="8jw-u3-Jxf" firstAttribute="top" secondItem="eWX-bc-9YB" secondAttribute="bottom" constant="15" id="qOk-74-74q"/>
+                        <constraint firstAttribute="trailing" secondItem="8jw-u3-Jxf" secondAttribute="trailing" constant="30" id="rkC-ml-k57"/>
+                        <constraint firstAttribute="trailing" secondItem="XqL-aQ-ymx" secondAttribute="trailing" constant="30" id="stI-ob-vDd"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwv-dT-dDc">
+                    <rect key="frame" x="0.0" y="440" width="320" height="40"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.0039215686274509803" green="0.68235294117647061" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="kUh-o0-Yap"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                    <state key="normal" title="Not yet registered? Sign Up">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnRegister:" destination="-1" eventType="touchUpInside" id="bdL-pj-yG0"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="cwv-dT-dDc" secondAttribute="bottom" id="1jL-ED-fWc"/>
+                <constraint firstAttribute="trailing" secondItem="cwv-dT-dDc" secondAttribute="trailing" id="6Qj-VV-Ith"/>
+                <constraint firstItem="7tO-oW-ywG" firstAttribute="top" secondItem="mVN-fk-TBZ" secondAttribute="top" id="7iP-n0-IVk"/>
+                <constraint firstAttribute="centerY" secondItem="CMf-Ef-xXv" secondAttribute="centerY" constant="-69" id="A1H-cp-NOs"/>
+                <constraint firstItem="7tO-oW-ywG" firstAttribute="leading" secondItem="mVN-fk-TBZ" secondAttribute="leading" id="N3V-nw-HvH"/>
+                <constraint firstAttribute="trailing" secondItem="7tO-oW-ywG" secondAttribute="trailing" id="N8n-lt-1QY"/>
+                <constraint firstItem="CMf-Ef-xXv" firstAttribute="top" secondItem="7tO-oW-ywG" secondAttribute="bottom" constant="8" id="YVC-iD-5fM"/>
+                <constraint firstItem="cwv-dT-dDc" firstAttribute="leading" secondItem="mVN-fk-TBZ" secondAttribute="leading" id="eKO-tz-0DY"/>
+                <constraint firstAttribute="trailing" secondItem="CMf-Ef-xXv" secondAttribute="trailing" id="o7f-DM-FgE"/>
+                <constraint firstItem="CMf-Ef-xXv" firstAttribute="leading" secondItem="mVN-fk-TBZ" secondAttribute="leading" id="uHT-eG-0aE"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="366" y="315"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="WaterSaverslogo" width="1500" height="1500"/>
+    </resources>
+</document>

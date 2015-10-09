@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ProximaNova-Regular.otf">
+            <string>ProximaNova-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Question13ViewController">
+            <connections>
+                <outlet property="picker" destination="50X-rv-P0C" id="7vt-38-7Wd"/>
+                <outlet property="view" destination="sLL-Qe-i6S" id="cvw-ha-VsG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="sLL-Qe-i6S">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="50X-rv-P0C">
+                    <rect key="frame" x="0.0" y="356" width="375" height="216"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="216" id="XhT-Ic-CGo"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ncp-Je-h85"/>
+                        <outlet property="delegate" destination="-1" id="Wkw-6k-xGL"/>
+                    </connections>
+                </pickerView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNj-AR-gYH">
+                    <rect key="frame" x="258" y="582" width="60" height="60"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="exz-G5-TeV"/>
+                        <constraint firstAttribute="height" constant="60" id="x3m-jo-G4q"/>
+                    </constraints>
+                    <state key="normal" image="next"/>
+                    <connections>
+                        <action selector="btnNext:" destination="-1" eventType="touchUpInside" id="lsP-nw-rSK"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooa-HR-XLb">
+                    <rect key="frame" x="58" y="582" width="60" height="60"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="YrV-w4-ry8"/>
+                        <constraint firstAttribute="height" constant="60" id="lAM-KN-1ep"/>
+                    </constraints>
+                    <state key="normal" image="return"/>
+                    <connections>
+                        <action selector="btnBack:" destination="-1" eventType="touchUpInside" id="Q7H-Oh-1TF"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="misc" translatesAutoresizingMaskIntoConstraints="NO" id="RzX-qf-lNE">
+                    <rect key="frame" x="117.5" y="30" width="140" height="175"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="140" id="KA6-Lc-lRe"/>
+                        <constraint firstAttribute="height" constant="175" id="brd-Uo-UoK"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miscellaneous water usage in gallons (Like Cooking, Cleaning, Running Water)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxI-Cd-uhL">
+                    <rect key="frame" x="5" y="215" width="365" height="140"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="24"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="jxI-Cd-uhL" firstAttribute="leading" secondItem="sLL-Qe-i6S" secondAttribute="leading" constant="5" id="2QC-FG-3Qk"/>
+                <constraint firstItem="RzX-qf-lNE" firstAttribute="centerX" secondItem="sLL-Qe-i6S" secondAttribute="centerX" id="9dY-qJ-BCt"/>
+                <constraint firstItem="ooa-HR-XLb" firstAttribute="centerX" secondItem="sLL-Qe-i6S" secondAttribute="centerX" constant="-100" id="DqP-oI-cHd"/>
+                <constraint firstAttribute="bottom" secondItem="ooa-HR-XLb" secondAttribute="bottom" constant="25" id="G1j-kd-Run"/>
+                <constraint firstItem="50X-rv-P0C" firstAttribute="top" secondItem="jxI-Cd-uhL" secondAttribute="bottom" constant="1" id="IXX-xC-Rmm"/>
+                <constraint firstAttribute="trailing" secondItem="jxI-Cd-uhL" secondAttribute="trailing" constant="5" id="Nj7-Xg-q4f"/>
+                <constraint firstItem="50X-rv-P0C" firstAttribute="leading" secondItem="sLL-Qe-i6S" secondAttribute="leading" id="aFE-qH-ajo"/>
+                <constraint firstItem="jxI-Cd-uhL" firstAttribute="top" secondItem="RzX-qf-lNE" secondAttribute="bottom" constant="10" id="fbW-lg-iI6"/>
+                <constraint firstAttribute="trailing" secondItem="50X-rv-P0C" secondAttribute="trailing" id="lPV-sa-1Nh"/>
+                <constraint firstItem="ooa-HR-XLb" firstAttribute="top" secondItem="50X-rv-P0C" secondAttribute="bottom" constant="10" id="mLk-k5-S71"/>
+                <constraint firstItem="cNj-AR-gYH" firstAttribute="centerX" secondItem="sLL-Qe-i6S" secondAttribute="centerX" constant="100" id="mqY-ao-RBD"/>
+                <constraint firstItem="RzX-qf-lNE" firstAttribute="top" secondItem="sLL-Qe-i6S" secondAttribute="top" constant="30" id="oIu-vB-hum"/>
+                <constraint firstAttribute="bottom" secondItem="cNj-AR-gYH" secondAttribute="bottom" constant="25" id="uxN-WZ-D6C"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="misc" width="84" height="84"/>
+        <image name="next" width="64" height="64"/>
+        <image name="return" width="64" height="64"/>
+    </resources>
+</document>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ProximaNova-Regular.otf">
+            <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
+        </mutableArray>
+        <mutableArray key="ProximaNova-Semibold.otf">
+            <string>ProximaNova-Semibold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultViewController">
+            <connections>
+                <outlet property="btnFacebook" destination="Fjg-we-lGa" id="tT1-z1-QaX"/>
+                <outlet property="btnTwitter" destination="bFa-Th-mmY" id="ob4-IF-E5c"/>
+                <outlet property="lblMyScore" destination="glS-QT-knE" id="Eer-S0-bNr"/>
+                <outlet property="lblWaterSaved" destination="88M-vV-XoG" id="3aH-Cb-N62"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score is :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5F-Zd-7Ul">
+                    <rect key="frame" x="0.0" y="151.5" width="320" height="25"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="SpK-Pf-L11"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="23"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fjg-we-lGa">
+                    <rect key="frame" x="50" y="447" width="80" height="80"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="72h-8I-ygn"/>
+                        <constraint firstAttribute="width" constant="80" id="gzF-7l-mPN"/>
+                    </constraints>
+                    <state key="normal" image="facebook"/>
+                    <connections>
+                        <action selector="postToFacebook:" destination="-1" eventType="touchUpInside" id="vev-Oa-5q6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFa-Th-mmY">
+                    <rect key="frame" x="190" y="447" width="80" height="80"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="8Hh-Sd-1Hl"/>
+                        <constraint firstAttribute="width" constant="80" id="ZMr-Of-lea"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="twitter"/>
+                    <connections>
+                        <action selector="postToTwitter:" destination="-1" eventType="touchUpInside" id="W5X-Ad-mEi"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glS-QT-knE">
+                    <rect key="frame" x="0.0" y="201.5" width="320" height="50"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="e2s-xH-Cys"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="40"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88M-vV-XoG">
+                    <rect key="frame" x="10" y="267" width="300" height="90"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="uWw-rw-PVQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="23"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Fjg-we-lGa" secondAttribute="bottom" constant="41" id="30q-y7-0Eb"/>
+                <constraint firstItem="bFa-Th-mmY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="70" id="3rz-mG-tbu"/>
+                <constraint firstItem="88M-vV-XoG" firstAttribute="top" secondItem="glS-QT-knE" secondAttribute="bottom" constant="15" id="CCM-XS-cwQ"/>
+                <constraint firstItem="88M-vV-XoG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="Cb9-uc-kS4"/>
+                <constraint firstAttribute="bottom" secondItem="bFa-Th-mmY" secondAttribute="bottom" constant="41" id="DwU-Zb-82g"/>
+                <constraint firstItem="glS-QT-knE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HxR-A9-FpD"/>
+                <constraint firstAttribute="trailing" secondItem="glS-QT-knE" secondAttribute="trailing" id="Tq7-KA-aTF"/>
+                <constraint firstAttribute="trailing" secondItem="J5F-Zd-7Ul" secondAttribute="trailing" id="UNF-1j-gwd"/>
+                <constraint firstItem="glS-QT-knE" firstAttribute="top" secondItem="J5F-Zd-7Ul" secondAttribute="bottom" constant="25" id="Wce-sN-36T"/>
+                <constraint firstItem="J5F-Zd-7Ul" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dhy-lu-aiZ"/>
+                <constraint firstItem="J5F-Zd-7Ul" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-120" id="psc-64-mgj"/>
+                <constraint firstItem="Fjg-we-lGa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-70" id="qVI-9a-n9C"/>
+                <constraint firstAttribute="trailing" secondItem="88M-vV-XoG" secondAttribute="trailing" constant="10" id="ugc-Nl-z5d"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="facebook" width="100" height="100"/>
+        <image name="twitter" width="100" height="100"/>
+    </resources>
+</document>

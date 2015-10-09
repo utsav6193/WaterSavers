@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ProximaNova-Regular.otf">
+            <string>ProximaNova-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Question5ViewController">
+            <connections>
+                <outlet property="picker" destination="4dS-4A-if8" id="dOk-cK-Dsc"/>
+                <outlet property="view" destination="lfX-Ei-aEC" id="a42-yU-nKR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="lfX-Ei-aEC">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Does your toilet have dual-flush ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNA-iJ-GpA">
+                    <rect key="frame" x="25" y="235" width="325" height="120"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="27"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4dS-4A-if8">
+                    <rect key="frame" x="0.0" y="356" width="375" height="216"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="216" id="v4a-VL-qN0"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Ll8-d6-qDg"/>
+                        <outlet property="delegate" destination="-1" id="Jfg-WK-D9X"/>
+                    </connections>
+                </pickerView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aa2-n2-Ttf">
+                    <rect key="frame" x="258" y="582" width="60" height="60"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="hg8-Co-d0w"/>
+                        <constraint firstAttribute="height" constant="60" id="pdk-5T-Mf8"/>
+                    </constraints>
+                    <state key="normal" image="next"/>
+                    <connections>
+                        <action selector="btnNext:" destination="-1" eventType="touchUpInside" id="R85-mq-mxJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmJ-rC-FIp">
+                    <rect key="frame" x="58" y="582" width="60" height="60"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="4DU-12-hox"/>
+                        <constraint firstAttribute="width" constant="60" id="KmO-JW-jTw"/>
+                    </constraints>
+                    <state key="normal" image="return"/>
+                    <connections>
+                        <action selector="btnBack:" destination="-1" eventType="touchUpInside" id="wLf-6s-Zki"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flushtype" translatesAutoresizingMaskIntoConstraints="NO" id="GPQ-NE-wh1">
+                    <rect key="frame" x="125" y="30" width="125" height="175"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="175" id="34E-wS-Euh"/>
+                        <constraint firstAttribute="width" constant="125" id="7vi-cG-k0P"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="4dS-4A-if8" secondAttribute="trailing" id="0Lt-jw-Owq"/>
+                <constraint firstItem="GPQ-NE-wh1" firstAttribute="top" secondItem="lfX-Ei-aEC" secondAttribute="top" constant="30" id="1bk-g7-sVn"/>
+                <constraint firstAttribute="trailing" secondItem="qNA-iJ-GpA" secondAttribute="trailing" constant="25" id="BrD-pM-AH5"/>
+                <constraint firstItem="GPQ-NE-wh1" firstAttribute="centerX" secondItem="lfX-Ei-aEC" secondAttribute="centerX" id="E0u-TW-HzH"/>
+                <constraint firstAttribute="bottom" secondItem="Aa2-n2-Ttf" secondAttribute="bottom" constant="25" id="H40-DG-mtj"/>
+                <constraint firstItem="4dS-4A-if8" firstAttribute="top" secondItem="qNA-iJ-GpA" secondAttribute="bottom" constant="1" id="Rxq-Ky-Pe3"/>
+                <constraint firstItem="nmJ-rC-FIp" firstAttribute="top" secondItem="4dS-4A-if8" secondAttribute="bottom" constant="10" id="bP5-8G-Ytb"/>
+                <constraint firstItem="qNA-iJ-GpA" firstAttribute="top" secondItem="GPQ-NE-wh1" secondAttribute="bottom" constant="30" id="caB-qy-JLX"/>
+                <constraint firstItem="4dS-4A-if8" firstAttribute="leading" secondItem="lfX-Ei-aEC" secondAttribute="leading" id="mQQ-st-vXX"/>
+                <constraint firstAttribute="bottom" secondItem="nmJ-rC-FIp" secondAttribute="bottom" constant="25" id="nQC-71-Mo8"/>
+                <constraint firstItem="qNA-iJ-GpA" firstAttribute="leading" secondItem="lfX-Ei-aEC" secondAttribute="leading" constant="25" id="qq6-KH-xWC"/>
+                <constraint firstItem="nmJ-rC-FIp" firstAttribute="centerX" secondItem="lfX-Ei-aEC" secondAttribute="centerX" constant="-100" id="rZ7-wg-GlS"/>
+                <constraint firstItem="Aa2-n2-Ttf" firstAttribute="centerX" secondItem="lfX-Ei-aEC" secondAttribute="centerX" constant="100" id="y2C-QG-WeX"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="flushtype" width="79" height="127"/>
+        <image name="next" width="64" height="64"/>
+        <image name="return" width="64" height="64"/>
+    </resources>
+</document>

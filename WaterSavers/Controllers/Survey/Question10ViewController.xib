@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ProximaNova-Regular.otf">
+            <string>ProximaNova-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Question10ViewController">
+            <connections>
+                <outlet property="picker" destination="oGE-w5-pW3" id="uM3-Ws-CcP"/>
+                <outlet property="view" destination="0wp-pl-AYR" id="0J5-iN-WAH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="0wp-pl-AYR">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many times do you operate your dishwasher per day?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09B-IK-cfY">
+                    <rect key="frame" x="15" y="235" width="345" height="120"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="24"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oGE-w5-pW3">
+                    <rect key="frame" x="0.0" y="356" width="375" height="216"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="216" id="fhG-wQ-ZgB"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="6hf-3R-RPX"/>
+                        <outlet property="delegate" destination="-1" id="rnh-b1-MYt"/>
+                    </connections>
+                </pickerView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ha7-gH-xXt">
+                    <rect key="frame" x="258" y="582" width="60" height="60"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="JgJ-Jl-nmR"/>
+                        <constraint firstAttribute="height" constant="60" id="KMk-gh-KFP"/>
+                    </constraints>
+                    <state key="normal" image="next"/>
+                    <connections>
+                        <action selector="btnNext:" destination="-1" eventType="touchUpInside" id="pbe-Wz-wgv"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHE-6h-Nfi">
+                    <rect key="frame" x="58" y="582" width="60" height="60"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="sJd-KQ-Bb6"/>
+                        <constraint firstAttribute="height" constant="60" id="tST-CZ-ATO"/>
+                    </constraints>
+                    <state key="normal" image="return"/>
+                    <connections>
+                        <action selector="btnBack:" destination="-1" eventType="touchUpInside" id="8mo-EP-xXI"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dishwasherfrequency1" translatesAutoresizingMaskIntoConstraints="NO" id="USe-9H-gVg">
+                    <rect key="frame" x="107" y="30" width="160" height="175"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="9aq-BU-COm"/>
+                        <constraint firstAttribute="height" constant="175" id="nXq-u8-v1s"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="oGE-w5-pW3" secondAttribute="trailing" id="4Y3-v1-jNc"/>
+                <constraint firstAttribute="bottom" secondItem="ha7-gH-xXt" secondAttribute="bottom" constant="25" id="FH3-bV-8zx"/>
+                <constraint firstItem="oGE-w5-pW3" firstAttribute="top" secondItem="09B-IK-cfY" secondAttribute="bottom" constant="1" id="Ghl-fh-GNc"/>
+                <constraint firstItem="UHE-6h-Nfi" firstAttribute="top" secondItem="oGE-w5-pW3" secondAttribute="bottom" constant="10" id="I96-Zu-mGu"/>
+                <constraint firstItem="09B-IK-cfY" firstAttribute="top" secondItem="USe-9H-gVg" secondAttribute="bottom" constant="30" id="MpT-5p-nI1"/>
+                <constraint firstItem="09B-IK-cfY" firstAttribute="leading" secondItem="0wp-pl-AYR" secondAttribute="leading" constant="15" id="Nvf-QX-qXQ"/>
+                <constraint firstItem="USe-9H-gVg" firstAttribute="centerX" secondItem="0wp-pl-AYR" secondAttribute="centerX" id="TL1-bp-WN4"/>
+                <constraint firstAttribute="trailing" secondItem="09B-IK-cfY" secondAttribute="trailing" constant="15" id="VAL-je-eIj"/>
+                <constraint firstItem="USe-9H-gVg" firstAttribute="top" secondItem="0wp-pl-AYR" secondAttribute="top" constant="30" id="Win-we-1xU"/>
+                <constraint firstItem="UHE-6h-Nfi" firstAttribute="centerX" secondItem="0wp-pl-AYR" secondAttribute="centerX" constant="-100" id="XYN-4a-6Fu"/>
+                <constraint firstItem="oGE-w5-pW3" firstAttribute="leading" secondItem="0wp-pl-AYR" secondAttribute="leading" id="Xpw-O0-jby"/>
+                <constraint firstItem="ha7-gH-xXt" firstAttribute="centerX" secondItem="0wp-pl-AYR" secondAttribute="centerX" constant="100" id="ghb-kH-NwZ"/>
+                <constraint firstAttribute="bottom" secondItem="UHE-6h-Nfi" secondAttribute="bottom" constant="25" id="kxX-In-dxW"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dishwasherfrequency1" width="100" height="100"/>
+        <image name="next" width="64" height="64"/>
+        <image name="return" width="64" height="64"/>
+    </resources>
+</document>

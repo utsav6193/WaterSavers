@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ProximaNova-Regular.otf">
+            <string>ProximaNova-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Question6ViewController">
+            <connections>
+                <outlet property="picker" destination="g69-B8-t9z" id="UFn-us-pgb"/>
+                <outlet property="view" destination="edy-RD-SHz" id="OFR-oJ-KNp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="edy-RD-SHz">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many times a day do you flush the toilet ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSK-On-5tM">
+                    <rect key="frame" x="25" y="235" width="325" height="120"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="27"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g69-B8-t9z">
+                    <rect key="frame" x="0.0" y="356" width="375" height="216"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="216" id="0rg-k8-VnY"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Amr-J4-Uxp"/>
+                        <outlet property="delegate" destination="-1" id="hLg-mw-5ju"/>
+                    </connections>
+                </pickerView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnf-5f-fNg">
+                    <rect key="frame" x="258" y="582" width="60" height="60"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="6hQ-37-lXz"/>
+                        <constraint firstAttribute="width" constant="60" id="n1q-1h-dvB"/>
+                    </constraints>
+                    <state key="normal" image="next"/>
+                    <connections>
+                        <action selector="btnNext:" destination="-1" eventType="touchUpInside" id="LEs-aU-WuO"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4n-ak-1tK">
+                    <rect key="frame" x="58" y="582" width="60" height="60"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="GQg-c3-eb1"/>
+                        <constraint firstAttribute="width" constant="60" id="pQZ-e9-Plg"/>
+                    </constraints>
+                    <state key="normal" image="return"/>
+                    <connections>
+                        <action selector="btnBack:" destination="-1" eventType="touchUpInside" id="Ida-Nn-Mq1"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toiletfrequency" translatesAutoresizingMaskIntoConstraints="NO" id="RK7-2d-w70">
+                    <rect key="frame" x="100" y="30" width="175" height="175"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="175" id="Ry8-op-hlq"/>
+                        <constraint firstAttribute="height" constant="175" id="l4p-c7-2fy"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="r4n-ak-1tK" firstAttribute="top" secondItem="g69-B8-t9z" secondAttribute="bottom" constant="10" id="64Y-Ni-IfK"/>
+                <constraint firstItem="HSK-On-5tM" firstAttribute="top" secondItem="RK7-2d-w70" secondAttribute="bottom" constant="30" id="BpG-mf-aP4"/>
+                <constraint firstAttribute="bottom" secondItem="tnf-5f-fNg" secondAttribute="bottom" constant="25" id="DLZ-PP-MGS"/>
+                <constraint firstItem="RK7-2d-w70" firstAttribute="centerX" secondItem="edy-RD-SHz" secondAttribute="centerX" id="UWd-RM-G5X"/>
+                <constraint firstItem="RK7-2d-w70" firstAttribute="top" secondItem="edy-RD-SHz" secondAttribute="top" constant="30" id="XkC-lR-a0M"/>
+                <constraint firstAttribute="trailing" secondItem="HSK-On-5tM" secondAttribute="trailing" constant="25" id="aDs-4Y-F1S"/>
+                <constraint firstItem="HSK-On-5tM" firstAttribute="leading" secondItem="edy-RD-SHz" secondAttribute="leading" constant="25" id="bhi-ef-LTd"/>
+                <constraint firstItem="r4n-ak-1tK" firstAttribute="centerX" secondItem="edy-RD-SHz" secondAttribute="centerX" constant="-100" id="bv8-Jh-FmV"/>
+                <constraint firstItem="tnf-5f-fNg" firstAttribute="centerX" secondItem="edy-RD-SHz" secondAttribute="centerX" constant="100" id="fc2-0U-Q8l"/>
+                <constraint firstItem="g69-B8-t9z" firstAttribute="top" secondItem="HSK-On-5tM" secondAttribute="bottom" constant="1" id="iD7-4P-TPM"/>
+                <constraint firstAttribute="trailing" secondItem="g69-B8-t9z" secondAttribute="trailing" id="rDr-lN-imo"/>
+                <constraint firstAttribute="bottom" secondItem="r4n-ak-1tK" secondAttribute="bottom" constant="25" id="rRf-Xl-ue5"/>
+                <constraint firstItem="g69-B8-t9z" firstAttribute="leading" secondItem="edy-RD-SHz" secondAttribute="leading" id="zHW-yK-oZm"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="next" width="64" height="64"/>
+        <image name="return" width="64" height="64"/>
+        <image name="toiletfrequency" width="210" height="210"/>
+    </resources>
+</document>
