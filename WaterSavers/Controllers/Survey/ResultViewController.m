@@ -15,6 +15,20 @@
 
 @implementation ResultViewController
 
+float family_size;
+float dishwasher_frequency;
+float sprinkler_frequency;
+float sprinkler_operation_time;
+float misc;
+BOOL low_flow_showerhead;
+float shower_length;
+float shower_frequency;
+BOOL flush_type;
+float flush_frequency;
+NSString *machine_type;
+float machine_loads;
+BOOL dishwasher_type;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setSideMenuBarButtonItem];
@@ -28,19 +42,19 @@
     float avg_consumption = 0.0f;
     float water_saved = 0.0f;
     
-    float family_size = [[appDel.dictResults valueForKey:@"family_size"] floatValue];
-    float dishwasher_frequency = [[appDel.dictResults valueForKey:@"dishwasher_frequency"] floatValue];
-    float sprinkler_frequency = [[appDel.dictResults valueForKey:@"sprinkler_frequency"] floatValue];
-    float sprinkler_operation_time = [[appDel.dictResults valueForKey:@"sprinkler_operation_time"] floatValue];
-    float misc = [[appDel.dictResults valueForKey:@"misc"] floatValue];
-    BOOL low_flow_showerhead = [[appDel.dictResults valueForKey:@"low_flow_showerhead"] boolValue];
-    float shower_length = [[appDel.dictResults valueForKey:@"shower_length"] floatValue];
-    float shower_frequency = [[appDel.dictResults valueForKey:@"shower_frequency"] floatValue];
-    BOOL flush_type = [[appDel.dictResults valueForKey:@"flush_type"] boolValue];
-    float flush_frequency = [[appDel.dictResults valueForKey:@"flush_frequency"] floatValue];
-    NSString *machine_type = [appDel.dictResults valueForKey:@"machine_type"];
-    float machine_loads = [[appDel.dictResults valueForKey:@"machine_loads"] floatValue];
-    BOOL dishwasher_type = [[appDel.dictResults valueForKey:@"dishwasher_type"] boolValue];
+    family_size = [[appDel.dictResults valueForKey:@"family_size"] floatValue];
+    dishwasher_frequency = [[appDel.dictResults valueForKey:@"dishwasher_frequency"] floatValue];
+    sprinkler_frequency = [[appDel.dictResults valueForKey:@"sprinkler_frequency"] floatValue];
+    sprinkler_operation_time = [[appDel.dictResults valueForKey:@"sprinkler_operation_time"] floatValue];
+    misc = [[appDel.dictResults valueForKey:@"misc"] floatValue];
+    low_flow_showerhead = [[appDel.dictResults valueForKey:@"low_flow_showerhead"] boolValue];
+    shower_length = [[appDel.dictResults valueForKey:@"shower_length"] floatValue];
+    shower_frequency = [[appDel.dictResults valueForKey:@"shower_frequency"] floatValue];
+    flush_type = [[appDel.dictResults valueForKey:@"flush_type"] boolValue];
+    flush_frequency = [[appDel.dictResults valueForKey:@"flush_frequency"] floatValue];
+    machine_type = [appDel.dictResults valueForKey:@"machine_type"];
+    machine_loads = [[appDel.dictResults valueForKey:@"machine_loads"] floatValue];
+    dishwasher_type = [[appDel.dictResults valueForKey:@"dishwasher_type"] boolValue];
     
     float shower_consumption_low = (shower_frequency * shower_length * 1.6 * family_size * 30);
     
@@ -254,7 +268,7 @@
 
 #pragma mark - Submit API
 
--(void)callSubmitAPI
+-(void)callLoginAPI
 {
     [CommonMethods showGlobalHUDWithTitle:HUDTitle];
     
@@ -273,5 +287,72 @@
         NSLog(@"Error: %@", error);
     }];
 }
+
+#pragma mark - Submit API
+
+- (void)callSubmitAPI {
+    NSString *strUserName = [appDel.dictUser valueForKey:@"username"];
+    
+    NSString *strBadge = @"0";
+    NSString *strWaterUsage = [NSString stringWithFormat:@"%d",(int)appDel.myWaterUsage];
+    NSString *strMyScore = [NSString stringWithFormat:@"%d",(int)appDel.myScore];
+    NSString *strFamilySize = [NSString stringWithFormat:@"%d",(int)family_size];
+    NSString *strDishwasherFrequency = [NSString stringWithFormat:@"%d",(int)dishwasher_frequency];
+    NSString *strSprinklerFrequency = [NSString stringWithFormat:@"%d",(int)sprinkler_frequency];
+    NSString *strSprinklerTime = [NSString stringWithFormat:@"%d",(int)sprinkler_operation_time];
+    NSString *strShowerLength = [NSString stringWithFormat:@"%d", (int)shower_length];
+    NSString *strShowerFrequency = [NSString stringWithFormat:@"%d", (int)shower_frequency];
+    NSString *strFlushFrequency = [NSString stringWithFormat:@"%d", (int)flush_frequency];
+    NSString *strMachineLoadType = machine_type;
+    NSString *strMachineLoads = [NSString stringWithFormat:@"%d", (int)machine_loads];
+    NSString *strMisc = [NSString stringWithFormat:@"%d", (int)misc];
+    NSString *strLowFlowStarType = [NSString stringWithFormat:@"%@",low_flow_showerhead?@"YES":@"NO"];
+    NSString *strFlushType = [NSString stringWithFormat:@"%@",flush_type?@"YES":@"NO"];
+    NSString *strDishwasherType = [NSString stringWithFormat:@"%@",dishwasher_type?@"YES":@"NO"];
+
+    NSDictionary *param = [NSDictionary dictionaryWithObjectsAndKeys:
+    strUserName, @"username",
+    strWaterUsage, @"water_use",
+    strMyScore, @"user_score",
+    strBadge, @"badge_status",
+    strFamilySize, @"family_size",
+    strDishwasherFrequency, @"dishwasher_frequency",
+    strSprinklerFrequency, @"sprinkler_frequency",
+    strSprinklerTime, @"sprinkler_operation_time",
+    strLowFlowStarType, @"low_flow_showerhead",
+    strShowerLength, @"shower_length",
+    strShowerFrequency, @"shower_frequency",
+    strFlushType, @"flush_type",
+    strFlushFrequency, @"flush_frequency",
+    strMachineLoadType, @"machine_type",
+    strMachineLoads, @"machine_loads",
+    strDishwasherType, @"dishwasher_type",
+    strMisc, @"misc", nil];
+    
+    if ([[CommonMethods sharedInstance] isConnected]) {
+        [CommonMethods showGlobalHUDWithTitle:HUDTitle];
+        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+        manager.requestSerializer = [AFJSONRequestSerializer serializer];
+        [manager POST:SUBMIT_URL parameters:param
+              success:^(AFHTTPRequestOperation *operation, id responseObject)
+        {
+            NSDictionary *dict = responseObject;
+            if ([[dict valueForKey:@"status"] boolValue])
+            {
+                NSLog(@"Data submitted");
+            }
+            [CommonMethods hideGlobalHUD];
+        }
+              failure:
+         ^(AFHTTPRequestOperation *operation, NSError *error) {
+             NSLog(@"Error: %@", error);
+             [CommonMethods hideGlobalHUD];
+         }];
+    }
+    else {
+        [CommonMethods showAlertWithMessage:NO_INTERNET];
+    }
+}
+
 
 @end

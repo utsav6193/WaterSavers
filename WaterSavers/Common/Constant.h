@@ -119,12 +119,12 @@ typedef NS_ENUM (NSUInteger, USER_STATE) {
 
 //Webservice URLs
 
-#define MAIN_URL  @"http://watersavers.iosnewbies.com/v1"
+#define MAIN_URL  @"http://watersavers.iosnewbies.com/v2"
 
 #define LOGIN_URL          MAIN_URL@"/login"
 #define REGISTRATION_URL   MAIN_URL@"/register"
 #define LEADERBOARD_URL    MAIN_URL@"/leaderboard"
-#define SUBMIT_URL         MAIN_URL@"/storescore"
+#define SUBMIT_URL         MAIN_URL@"/storescoredetails"
 
 
 //Company Keys
